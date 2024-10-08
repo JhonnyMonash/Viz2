@@ -1,0 +1,119 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Line chart showing total yearly passengers over financial years with annotations and thicker lines.",
+    "data": {
+        "url": "https://raw.githubusercontent.com/JhonnyMonash/Viz2/refs/heads/main/data/Annual_PAX.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "width": 600,
+    "height": 400,
+    "layer": [
+        {
+            "mark": {
+                "type": "line",
+                "point": true,
+                "strokeWidth": 4
+            },
+            "encoding": {
+                "x": {
+                    "field": "Fin_year",
+                    "type": "ordinal",
+                    "axis": {
+                        "title": "Financial Year"
+                    }
+                },
+                "y": {
+                    "field": "Total_Yearly_PAX",
+                    "type": "quantitative",
+                    "axis": {
+                        "title": "Total Yearly Passengers"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Fin_year",
+                        "type": "ordinal",
+                        "title": "Financial Year"
+                    },
+                    {
+                        "field": "Total_Yearly_PAX",
+                        "type": "quantitative",
+                        "title": "Total Yearly Passengers"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "color": "lightblue",
+                "strokeDash": [
+                    5,
+                    5
+                ],
+                "strokeWidth": 2
+            },
+            "encoding": {
+                "x": {
+                    "datum": "FY19-20"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "color": "lightblue",
+                "strokeDash": [
+                    5,
+                    5
+                ],
+                "strokeWidth": 2
+            },
+            "encoding": {
+                "x": {
+                    "datum": "FY21-22"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "fontSize": 13,
+                "align": "left",
+                "dx": 5,
+                "font": "helvetica",
+                "fontWeight": "bold",
+                "tooltip": false,
+                "dy": -80,
+                "color": "light blue"
+            },
+            "transform": [
+                {
+                    "filter": "datum.Fin_year == 'FY19-20'"
+                },
+                {
+                    "calculate": "'Covid-19 lockdowns showing its impact; people were forced to work from home; rather than taking the train to work.'",
+                    "as": "raw"
+                },
+                {
+                    "calculate": "split(datum.raw, ';')",
+                    "as": "coun"
+                }
+            ],
+            "encoding": {
+                "x": {
+                    "datum": "FY19-20"
+                },
+                "y": {
+                    "datum": 178626800
+                },
+                "text": {
+                    "field": "coun",
+                    "type": "nominal"
+                }
+            }
+        }
+    ]
+}

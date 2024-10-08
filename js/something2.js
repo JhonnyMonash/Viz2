@@ -1,4 +1,6 @@
-var vg_3 = "js/";
+var vg_3 = "js/annual.vg.json";
+vegaEmbed("#vg_2", vg_2, { "actions": false }).then(function (result) { }).catch(console.error);
+
 var vg_2 = "js/station_patronage.vg.json";
 vegaEmbed("#vg_2", vg_2, { "actions": false }).then(function (result) {
     var view = result.view;
@@ -31,7 +33,7 @@ vegaEmbed("#vg_2", vg_2, { "actions": false }).then(function (result) {
     });
 }).catch(console.error);
  
-var vg_1 = "js/test.vg.json";
+var vg_1 = "js/bar.vg.json";
 vegaEmbed("#vg_1", vg_1, { "actions": false }).then(function (result) {
     var view = result.view;
     var lines = [
