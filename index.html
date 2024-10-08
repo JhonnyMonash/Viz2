@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="js/something2.js"></script>
+    <title>FIT3179 Week10 Homework </title>
+    <style>
+        #checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+    
+        #checkbox-container label {
+            width: 150px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Week10 Homework Map</h1>
+    <div id="checkbox-container">
+        <label><input type="checkbox" id="line_Alamein" > Alamein</label>
+        <label><input type="checkbox" id="line_Belgrave" > Belgrave</label>
+        <label><input type="checkbox" id="line_City_Loop" > City Loop</label>
+        <label><input type="checkbox" id="line_Craigieburn" > Craigieburn</label>
+        <label><input type="checkbox" id="line_Cranbourne" checked> Cranbourne</label>
+        <label><input type="checkbox" id="line_Frankston" > Frankston</label>
+        <label><input type="checkbox" id="line_Glen_Waverley" > Glen Waverley</label>
+        <label><input type="checkbox" id="line_Hurstbridge" > Hurstbridge</label>
+        <label><input type="checkbox" id="line_Lilydale" > Lilydale</label>
+        <label><input type="checkbox" id="line_Mernda" > Mernda</label>
+        <label><input type="checkbox" id="line_Pakenham" > Pakenham</label>
+        <label><input type="checkbox" id="line_Sandringham" > Sandringham</label>
+        <label><input type="checkbox" id="line_Sunbury" > Sunbury</label>
+        <label><input type="checkbox" id="line_Upfield" > Upfield</label>
+        <label><input type="checkbox" id="line_Werribee" > Werribee</label>
+        <label><input type="checkbox" id="line_Williamstown" > Williamstown</label>
+    </div>
+    <div>
+        <div id="vg_2">
+        </div>
+    </div>
+    <div>
+        <h3>Note: Footscray and Caulfield station don't have myki tap free transfers; patronage data may not be accurate </h3>
+    </div>
+    <div>
+        <div id="vg_1">
+        </div>
+    </div>
+</body>
+
+</html>
