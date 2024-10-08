@@ -1,0 +1,98 @@
+/* General styles */
+body {
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #2c3e50;
+    margin: 20px 0;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #8e44ad;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Container for the checkboxes */
+#checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+#checkbox-container label {
+    width: 150px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #34495e;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+#checkbox-container input {
+    margin-bottom: 5px;
+}
+
+/* Chart container */
+#vg_1,
+#vg_2,
+#vg_3 {
+    margin: 30px auto;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex container for the two sections */
+#split-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+/* Styles for the two sides */
+.split {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.split-inner {
+    flex: 1;
+    margin: 10px 0;
+}
+
+.split h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Center content and give padding */
+.centered-container {
+    text-align: center;
+    padding: 20px;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
