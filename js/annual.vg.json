@@ -40,7 +40,8 @@
                     {
                         "field": "Total_Yearly_PAX",
                         "type": "quantitative",
-                        "title": "Total Yearly Passengers"
+                        "title": "Total Yearly Passengers",
+                        "format": ",d"
                     }
                 ]
             }
