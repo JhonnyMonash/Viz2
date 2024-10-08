@@ -9,54 +9,137 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
     <script src="js/something2.js"></script>
-    <title>FIT3179 Week10 Homework </title>
+    <title>Melbourne's Busiest Train Stations</title>
     <style>
+        /* General styles */
+        body {
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin: 20px 0;
+            font-size: 2.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #8e44ad;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Container for the checkboxes */
         #checkbox-container {
             display: flex;
             flex-wrap: wrap;
-            max-width: 800px;
-            margin-bottom: 20px;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1000px;
         }
-    
+
         #checkbox-container label {
             width: 150px;
-            margin-right: 10px;
-            margin-bottom: 5px;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #34495e;
+        }
+
+        #checkbox-container input {
+            margin-right: 5px;
+        }
+
+        /* Chart container */
+        #vg_1,
+        #vg_2 {
+            margin: 30px auto;
+            max-width: 1000px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Flex container for the two sections */
+        #split-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 1000px;
+        }
+
+        /* Styles for the two sides */
+        .split {
+            flex: 1;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text alignment for the split content */
+        .split h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Center content and give padding */
+        .centered-container {
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Week10 Homework Map</h1>
+    <div class="centered-container">
+        <h1>Melbourne's Busiest Train Stations</h1>
+    </div>
+    <div id="split-container">
+        <div class="split">
+            <p>Melbourne's train network is a vital part of the city’s public transport system, serving thousands of commuters every
+            day. As the city grows, understanding which train stations experience the highest ridership is crucial for ensuring that
+            resources are efficiently allocated and services meet demand. This visualization aims to provide insights into the
+            busiest train stations across different lines in Melbourne.</p>
+            <div></div>
+        </div>
+        <div class="split">
+            <h2></h2>
+            <div></div>
+        </div>
+    </div>
+
     <div id="checkbox-container">
-        <label><input type="checkbox" id="line_Alamein" > Alamein</label>
-        <label><input type="checkbox" id="line_Belgrave" > Belgrave</label>
-        <label><input type="checkbox" id="line_City_Loop" > City Loop</label>
-        <label><input type="checkbox" id="line_Craigieburn" > Craigieburn</label>
+        <label><input type="checkbox" id="line_Alamein"> Alamein</label>
+        <label><input type="checkbox" id="line_Belgrave"> Belgrave</label>
+        <label><input type="checkbox" id="line_City_Loop"> City Loop</label>
+        <label><input type="checkbox" id="line_Craigieburn"> Craigieburn</label>
         <label><input type="checkbox" id="line_Cranbourne" checked> Cranbourne</label>
-        <label><input type="checkbox" id="line_Frankston" > Frankston</label>
-        <label><input type="checkbox" id="line_Glen_Waverley" > Glen Waverley</label>
-        <label><input type="checkbox" id="line_Hurstbridge" > Hurstbridge</label>
-        <label><input type="checkbox" id="line_Lilydale" > Lilydale</label>
-        <label><input type="checkbox" id="line_Mernda" > Mernda</label>
-        <label><input type="checkbox" id="line_Pakenham" > Pakenham</label>
-        <label><input type="checkbox" id="line_Sandringham" > Sandringham</label>
-        <label><input type="checkbox" id="line_Sunbury" > Sunbury</label>
-        <label><input type="checkbox" id="line_Upfield" > Upfield</label>
-        <label><input type="checkbox" id="line_Werribee" > Werribee</label>
-        <label><input type="checkbox" id="line_Williamstown" > Williamstown</label>
+        <label><input type="checkbox" id="line_Frankston"> Frankston</label>
+        <label><input type="checkbox" id="line_Glen_Waverley"> Glen Waverley</label>
+        <label><input type="checkbox" id="line_Hurstbridge"> Hurstbridge</label>
+        <label><input type="checkbox" id="line_Lilydale"> Lilydale</label>
+        <label><input type="checkbox" id="line_Mernda"> Mernda</label>
+        <label><input type="checkbox" id="line_Pakenham"> Pakenham</label>
+        <label><input type="checkbox" id="line_Sandringham"> Sandringham</label>
+        <label><input type="checkbox" id="line_Sunbury"> Sunbury</label>
+        <label><input type="checkbox" id="line_Upfield"> Upfield</label>
+        <label><input type="checkbox" id="line_Werribee"> Werribee</label>
+        <label><input type="checkbox" id="line_Williamstown"> Williamstown</label>
     </div>
-    <div>
-        <div id="vg_2">
-        </div>
+
+    <!-- Split container section -->
+    
+
+    <div class="centered-container">
+        <h3>Note: Footscray and Caulfield station don't have myki tap free transfers; patronage data may not be
+            accurate.</h3>
     </div>
-    <div>
-        <h3>Note: Footscray and Caulfield station don't have myki tap free transfers; patronage data may not be accurate </h3>
-    </div>
-    <div>
-        <div id="vg_1">
-        </div>
-    </div>
+
 </body>
 
 </html>
