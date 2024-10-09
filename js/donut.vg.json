@@ -34,7 +34,7 @@
             "as": "Percentage"
         },
         {
-            "calculate": "datum.Station + ' (' + format(datum.Percentage, '.2f') + '%)'",
+            "calculate": "datum.Station + ' (' + format(datum.Percentage, '.1f') + '%)'",
             "as": "LabelWithPercentage"
         }
     ],
@@ -74,14 +74,20 @@
                 "field": "Percentage",
                 "type": "quantitative",
                 "title": "Percentage of total(%)",
-                "format": ".2f"
+                "format": ".1f"
+            },
+            {
+                "field": "PAX",
+                "type": "quantitative",
+                "title": "Number of Passengers",
+                "format": ",d"
             }
         ]
     },
     "layer": [
         {"mark":{"type": "arc","outerRadius":170}},
         {
-        "mark": {"type": "text", "radius": 230, "fontSize": 12},
+        "mark": {"type": "text", "radius": 230, "fontSize": 14},
         "encoding": {"text": {"field": "LabelWithPercentage"}}
         }
     ]

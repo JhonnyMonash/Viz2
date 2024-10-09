@@ -41,70 +41,6 @@
         "step": 0.01,
         "name": "Center Latitude (Up - Down): "
       }
-    },
-    {
-      "name": "line_Alamein",
-      "value": false
-    },
-    {
-      "name": "line_Belgrave",
-      "value": false
-    },
-    {
-      "name": "line_Craigieburn",
-      "value": false
-    },
-    {
-      "name": "line_City_Loop",
-      "value": false
-    },
-    {
-      "name": "line_Cranbourne",
-      "value": true
-    },
-    {
-      "name": "line_Frankston",
-      "value": false
-    },
-    {
-      "name": "line_Glen_Waverley",
-      "value": false
-    },
-    {
-      "name": "line_Hurstbridge",
-      "value": false
-    },
-    {
-      "name": "line_Lilydale",
-      "value": false
-    },
-    {
-      "name": "line_Mernda",
-      "value": false
-    },
-    {
-      "name": "line_Pakenham",
-      "value": false
-    },
-    {
-      "name": "line_Sandringham",
-      "value": false
-    },
-    {
-      "name": "line_Sunbury",
-      "value": false
-    },
-    {
-      "name": "line_Upfield",
-      "value": false
-    },
-    {
-      "name": "line_Werribee",
-      "value": false
-    },
-    {
-      "name": "line_Williamstown",
-      "value": false
     }
   ],
   "projection": {
@@ -149,9 +85,6 @@
           "flatten": [
             "LineArray"
           ]
-        },
-        {
-          "filter": "(line_Alamein && datum.LineArray == 'Alamein') || (line_Belgrave && datum.LineArray == 'Belgrave') || (line_City_Loop && datum.LineArray == 'City Loop') || (line_Craigieburn && datum.LineArray == 'Craigieburn') || (line_Cranbourne && datum.LineArray == 'Cranbourne') || (line_Frankston && datum.LineArray == 'Frankston') || (line_Glen_Waverley && datum.LineArray == 'Glen Waverley') || (line_Hurstbridge && datum.LineArray == 'Hurstbridge') || (line_Lilydale && datum.LineArray == 'Lilydale') || (line_Mernda && datum.LineArray == 'Mernda') || (line_Pakenham && datum.LineArray == 'Pakenham') || (line_Sandringham && datum.LineArray == 'Sandringham') || (line_Sunbury && datum.LineArray == 'Sunbury') || (line_Upfield && datum.LineArray == 'Upfield') || (line_Werribee && datum.LineArray == 'Werribee') || (line_Williamstown && datum.LineArray == 'Williamstown')"
         }
       ],
       "mark": {

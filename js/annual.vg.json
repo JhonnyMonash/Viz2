@@ -55,7 +55,7 @@
         {
             "mark": {
                 "type": "rule",
-                "color": "lightblue",
+                "color": "#06C",
                 "strokeDash": [
                     5,
                     5
@@ -71,7 +71,7 @@
         {
             "mark": {
                 "type": "rule",
-                "color": "lightblue",
+                "color": "#06C",
                 "strokeDash": [
                     5,
                     5
@@ -94,7 +94,7 @@
                 "fontWeight": "bold",
                 "tooltip": false,
                 "dy": -80,
-                "color": "lightblue"
+                "color": "#06C"
             },
             "transform": [
                 {

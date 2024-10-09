@@ -4,7 +4,7 @@
         "top": 20,
         "left": 5,
         "right": 5,
-        "bottom": 5
+        "bottom": 15
     },
     "description": "A bar chart showing the busiest train stations by annual ridership, filtered by train line.",
     "width": 850,
