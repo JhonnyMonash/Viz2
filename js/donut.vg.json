@@ -34,7 +34,7 @@
             "as": "Percentage"
         },
         {
-            "calculate": "datum.Station + '(' + format(datum.Percentage, '.2f') + '%)'",
+            "calculate": "datum.Station + ' (' + format(datum.Percentage, '.2f') + '%)'",
             "as": "LabelWithPercentage"
         }
     ],
@@ -48,21 +48,22 @@
             "field": "Station",
             "type": "nominal",
             "scale":{"domain":[
-                "Flinders Street  ",
+                "Flinders Street",
                 "Southern Cross",
-                "Parliament ",
+                "Parliament",
                 "Melbourne Central",
                 "Flagstaff"
             ],
             "range":[
-                "#4B4B4B",
-                "#FFAA00",
-                "#1F78B4",
-                "#6DBE45",
-                "#FFD700"
+                "#8BC1F7",
+                "#519DE9",
+                "#06C",
+                "#004B95",
+                "#002F5D"
             ]},
             "legend" : null
         },
+        "order" :{"field":"PAX","type": "quantitative","sort": "descending"},
         "tooltip":[
             {
                 "field": "Station",
@@ -80,7 +81,7 @@
     "layer": [
         {"mark":{"type": "arc","outerRadius":170}},
         {
-        "mark": {"type": "text", "radius": 220, "fontSize": 12},
+        "mark": {"type": "text", "radius": 230, "fontSize": 12},
         "encoding": {"text": {"field": "LabelWithPercentage"}}
         }
     ]
