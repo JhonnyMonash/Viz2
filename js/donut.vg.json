@@ -7,8 +7,8 @@
         "bottom": 5
     },
     "description": "A donut chart of the city loop stations",
-    "width": 850,
-    "height": 400,
+    "width": 300,
+    "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/JhonnyMonash/Viz2/refs/heads/main/data/City_Loop_Stations.csv",
         "format": {
@@ -85,9 +85,9 @@
         ]
     },
     "layer": [
-        {"mark":{"type": "arc","outerRadius":170}},
+        {"mark":{"type": "arc","outerRadius":100}},
         {
-        "mark": {"type": "text", "radius": 230, "fontSize": 14},
+        "mark": {"type": "text", "radius": 150, "fontSize": 12},
         "encoding": {"text": {"field": "LabelWithPercentage"}}
         }
     ]

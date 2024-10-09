@@ -1,3 +1,6 @@
+var vg_4 = "js/donut.vg.json";
+vegaEmbed("#vg_4", vg_4, { "actions": false }).then(function (result) { }).catch(console.error);
+
 var vg_3 = "js/annual.vg.json";
 vegaEmbed("#vg_3", vg_3, { "actions": false }).then(function (result) { }).catch(console.error);
 
@@ -25,7 +28,7 @@ vegaEmbed("#vg_2", vg_2, { "actions": false }).then(function (result) {
 
     // Bind checkboxes to Vega-Lite parameters
     lines.forEach(function (line) {
-        var paramName = 'line_' + line.replace(/\s+/g, '_');
+        var paramName = 'line2_' + line.replace(/\s+/g, '_');
         var checkbox = document.getElementById(paramName);
         checkbox.addEventListener('change', function () {
             view.signal(paramName, checkbox.checked).run();

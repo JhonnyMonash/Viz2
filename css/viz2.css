@@ -48,7 +48,8 @@ h3 {
 /* Chart container */
 #vg_1,
 #vg_2,
-#vg_3 {
+#vg_3,
+#vg_4 {
     margin: 30px auto;
     max-width: 1000px;
     background-color: white;
