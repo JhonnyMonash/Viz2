@@ -92,3 +92,10 @@ h3 {
     text-align: center;
     padding: 20px;
 }
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #444444;
+    font-size: 15pt;
+    background-color: #FAFAFA;
+}
