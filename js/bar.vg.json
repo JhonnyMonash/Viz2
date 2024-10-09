@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A bar chart showing the busiest train stations by annual ridership, filtered by train line.",
-    "width": 600,
+    "width": 850,
     "height": 400,
     "title": "Busiest Train Stations for selected lines (FY23-24)",
     "data": {
@@ -150,11 +150,6 @@
                 "type": "quantitative",
                 "title": "Annual Ridership",
                 "format": ",d"
-            },
-            {
-                "field": "LineArray",
-                "type": "nominal",
-                "title": "Train Lines"
             }
         ]
     }
