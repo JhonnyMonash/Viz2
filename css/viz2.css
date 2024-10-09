@@ -7,15 +7,15 @@ body {
 
 h1 {
     color: #2c3e50;
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 2.5em;
     text-align: center;
 }
 
 h3 {
     font-size: 1.2em;
-    color: #8e44ad;
-    margin-top: 20px;
+    color: #000000bb;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -88,9 +88,31 @@ h3 {
 }
 
 /* Center content and give padding */
-.centered-container {
+.centered-title {
+    flex: auto;
     text-align: center;
     padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+}
+.centered-container{
+    width: 80%;
+        /* Adjust the width as per your needs */
+        background-color: #f0f4f7;
+        /* Light background color */
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        /* Center the container */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Optional shadow for a nice effect */
+        text-align: center;
+        /* Center the text */
 }
 
 body {

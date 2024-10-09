@@ -1,5 +1,11 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "padding": {
+        "top": 20,
+        "left": 5,
+        "right": 5,
+        "bottom": 5
+    },
     "description": "Line chart showing total yearly passengers over financial years with annotations and thicker lines.",
     "data": {
         "url": "https://raw.githubusercontent.com/JhonnyMonash/Viz2/refs/heads/main/data/Annual_PAX.csv",
@@ -84,11 +90,11 @@
                 "fontSize": 13,
                 "align": "left",
                 "dx": 5,
-                "font": "helvetica",
+                "font": "Helvetica",
                 "fontWeight": "bold",
                 "tooltip": false,
                 "dy": -80,
-                "color": "light blue"
+                "color": "lightblue"
             },
             "transform": [
                 {

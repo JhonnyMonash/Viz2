@@ -1,8 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "padding": {
+    "top": 20,
+    "left": 5,
+    "right": 5,
+    "bottom": 5
+  },
   "width": 800,
   "height": 800,
-  "title": "Melbourne Train Station Ridership FY23-24",
   "params": [
     {
       "name": "zoom_level",
