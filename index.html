@@ -17,28 +17,33 @@
     <div class="centered-title">
         <h1>Melbourne's Busiest Train Stations</h1>
     </div>
-    <div id="split-container">
-        <div class="split">
-            <div class="split-inner">
-                <p>Melbourne's train network is a vital part of the city’s public transport system, serving thousands of
-                    commuters every day. As the city grows, understanding which train stations experience the highest
-                    ridership is crucial for ensuring that resources are efficiently allocated and services meet demand.
-                    This visualisation aims to provide insights into the busiest train stations across different lines in
-                    Melbourne.</p>
+    <div class="centered-container">
+        <div id="split-container">
+            <div class="split">
+                <div class="split-inner">
+                    <p>Melbourne's train network is a vital part of the city’s public transport system, serving thousands of
+                        commuters every day. As the city grows, understanding which train stations experience the highest
+                        ridership is crucial for ensuring that resources are efficiently allocated and services meet demand.
+                        This visualisation aims to provide insights into the busiest train stations across different lines in
+                        Melbourne.</p>
+                </div>
+                <div class="split-inner">
+                    <p>The graph on the right displays the total yearly passengers in Melbourne over several years. Ridership
+                        was relatively high during FY18-19, peaking before a significant decline due to the COVID-19 pandemic,
+                        This drop reflects the impact of pandemic-related restrictions,
+                        such as lockdowns and an increase in remote work.
+                        
+                        In subsequent years, ridership shows a steady recovery, though it has not yet reached pre-pandemic
+                        levels.</p>
+                </div>
             </div>
-            <div class="split-inner">
-                <p>The graph on the right displays the total yearly passengers in Melbourne over several years. Ridership
-                was relatively high during FY18-19, peaking before a significant decline due to the COVID-19 pandemic, This drop reflects the impact of pandemic-related restrictions,
-                such as lockdowns and an increase in remote work.
-                
-                In subsequent years, ridership shows a steady recovery, though it has not yet reached pre-pandemic levels.</p>
+            <div class="split">
+                <h3>Total Ridership over the years</h3>
+                <div id="vg_3"></div>
             </div>
-        </div>
-        <div class="split">
-            <h3>Total Ridership over the years</h3>
-            <div id="vg_3"></div>
         </div>
     </div>
+    
     <div class = "centered-title">
         <h2>Where are people going?</h2>
     </div>
@@ -74,31 +79,61 @@
         </div>
         
     </div>
-    <div id="split-container">
-        <div class="split">
-            <h2>City Loop Stations</h2>
-            <div id="vg_4"></div>
-        </div>
-        <div class="split">
-            <div class="split-inner">
-                <p>Melbourne's train network is a vital part of the city’s public transport system, serving thousands of
-                    commuters every day. As the city grows, understanding which train stations experience the highest
-                    ridership is crucial for ensuring that resources are efficiently allocated and services meet demand.
-                    This visualisation aims to provide insights into the busiest train stations across different lines in
-                    Melbourne.</p>
+    <div class="centered-container">
+        <div id="split-container">
+            <div class="split">
+                <h2>City Loop Stations</h2>
+                <div id="vg_4"></div>
             </div>
-            <div class="split-inner">
-                <p>The graph on the right displays the total yearly passengers in Melbourne over several years. Ridership
-                    was relatively high during FY18-19, peaking before a significant decline due to the COVID-19 pandemic,
-                    This drop reflects the impact of pandemic-related restrictions,
-                    such as lockdowns and an increase in remote work.
-            
-                    In subsequent years, ridership shows a steady recovery, though it has not yet reached pre-pandemic
-                    levels.</p>
+            <div class="split">
+                <div class="split-inner">
+                    <p>The most busy station in the City Loop is the Flinders Street Station, followed by Southern Cross Station
+                        (used to be called Spencer Street Station) and Melbourne Central. </p>
+                    <p>It is unsuprising as Flinders Street Station is a connection hub for every line in Melbournes Train
+                        system. </p>
+                    <p>Southern Cross resides in a more business focused area, many passengers get off there to go to work.</p>
+                    <p>Apart from also being a major hub for most services, Melbourne Central is also surrounded by wide range
+                        of retail stores, restaurants and entertainment options. It busyness also boosted by its close proximity
+                        to RMIT University.</p>
+                </div>
+                <div class="split-inner">
+                    <p></p>
+                </div>
             </div>
         </div>
     </div>
+    <div class="centered-title">
+        <h2>Whats Next?</h2>
+    </div>
     <div class="centered-container">
+        <div id="split-container">
+            <div class="split">
+                <div class="split-inner">
+                    <p>From a survey conducted in 2024</p>
+                    <p><b>80%</b> of survey wanted Airport rail. (although lets face it its never going happen) </p>
+                    <br>
+                    <br>    
+                    <p><b>66%</b> of people wanted the Metro Tunnel. This would free up track availablity in the City Loop allowing more trains to run there.</p>
+                    <br>
+                    <br>
+                    <p><b>64%</b> of people wanted the Surburban Rail Loop. This would connect the major hub stations into a new line.</p>
+                </div>
+            </div>
+            <div class="split">
+            <img src="https://bigbuild.vic.gov.au/__data/assets/image/0015/490002/melbourne-airport-rail-logo.png" width="400">
+            <p></p>
+            <img src="https://bigbuild.vic.gov.au/__data/assets/image/0005/485114/metro-tunnel-logo.png" width="400">
+            <p></p>
+            <img src="https://bigbuild.vic.gov.au/__data/assets/image/0009/492129/varieties/hero_banner_project_logo.png">
+            </div>
+        </div>
+    </div>
+    <div class="centered-title">
+        <h2>Insight into specific lines</h2>
+    </div>
+    <div class="centered-container">
+        <p>Below you can select which line you wish to view, and will display all stations on that line from the busiest to the quietest stations.</p>
+        <p>(would recommend not selecting too many, &lt; 4 as it will be too messy to view )</p>
         <div id="vg_1"></div>
         <div id="checkbox-container">
             <label><input type="checkbox" id="line_Alamein"> Alamein</label>
@@ -121,10 +156,11 @@
     </div>
     
     <div class="centered-container">
-        <h3>Note: Dandenong, Footscray and, Caulfield station don't have myki tap free transfers; patronage data may not be
-            accurate.</h3>
-        <h3>East Pakenham station opened in June 2024, ridership data may not be an accurate representation</h3>
-        
+        <h4>Note: Dandenong, Footscray and, Caulfield station don't have myki tap free transfers; patronage data may not be
+            accurate.</h4>
+        <h4>East Pakenham station opened in June 2024, ridership data may not be an accurate representation</h4>
+        <p>Produced by John Zhang; ID:32517246; 10/10/2024; for FIT3179 Visualisation 2</p>
+        <p>Sources:<br> <a href="https://melbourne.org.au/wp-content/uploads/2024/07/Living-in-Melbourne_Final_20240718-3.pdf">Survey</a> <br> <a href="https://discover.data.vic.gov.au/dataset/annual-metropolitan-train-station-patronage-station-entries">Patronage Data </a></br></p>
     </div>
 
 </body>
