@@ -186,7 +186,8 @@
             ]
           },
           "legend": {
-            "title": "Ridership (Passengers)"
+            "title": "Ridership (Passengers)",
+            "orient": "bottom-right"
           }
         },
         "tooltip": [
