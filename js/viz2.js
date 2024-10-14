@@ -52,6 +52,7 @@ vegaEmbed("#vg_1", vg_1, { "actions": false }).then(function (result) {
         'Mernda',
         'Pakenham',
         'Sandringham',
+        'Stony Point',
         'Sunbury',
         'Upfield',
         'Werribee',

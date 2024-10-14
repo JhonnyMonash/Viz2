@@ -6,7 +6,7 @@
     "right": 5,
     "bottom": 5
   },
-  "width": 1000,
+  "width": 800,
   "height": 800,
   "params": [
     {
@@ -17,7 +17,7 @@
         "min": 35000,
         "max": 80000,
         "step": 100,
-        "name": "Zoom: "
+        "name": "\nZoom Level:"
       }
     },
     {
@@ -28,7 +28,7 @@
         "min": 144.9,
         "max": 145.25,
         "step": 0.01,
-        "name": "Center Longitude (Left - Right): "
+        "name": "\nCenter Longitude (Left - Right):"
       }
     },
     {
@@ -39,7 +39,7 @@
         "min": -38.2,
         "max": -37.8,
         "step": 0.01,
-        "name": "Center Latitude (Up - Down): "
+        "name": "\nCenter Latitude (Up - Down):"
       }
     }
   ],
@@ -118,12 +118,53 @@
             ]
           },
           "legend": {
-            "title": "Annual Passengers"
+            "title": "Annual Passengers",
+            "orient": "bottom-right"
           }
         },
         "color": {
           "field": "LineArray",
           "type": "nominal",
+          "scale": {
+            "domain": [
+              "Alamein",
+              "Belgrave",
+              "City Loop",
+              "Craigieburn",
+              "Cranbourne",
+              "Frankston",
+              "Glen Waverley",
+              "Hurstbridge",
+              "Lilydale",
+              "Mernda",
+              "Pakenham",
+              "Sandringham",
+              "Stony Point",
+              "Sunbury",
+              "Upfield",
+              "Werribee",
+              "Williamstown"
+            ],
+            "range": [
+              "#0b4b7a",
+              "#0b4b7a",
+              "#FFFFFF",
+              "#f8b315",
+              "#33aed1",
+              "#018f3a",
+              "#0b4b7a",
+              "#ce1626",
+              "#0b4b7a",
+              "#ce1626",
+              "#33aed1",
+              "#f17ab1",
+              "#018f3a",
+              "#f8b315",
+              "#f8b315",
+              "#018f3a",
+              "#018f3a"
+            ]
+          },
           "legend": {
             "title": "Train Lines"
           }
@@ -133,7 +174,7 @@
             "selection": "line_selection",
             "value": 1
           },
-          "value": 0.1
+          "value": 0.05
         },
         "tooltip": [
           {

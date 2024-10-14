@@ -62,6 +62,10 @@
             "value": false
         },
         {
+            "name": "line_Stony_Point",
+            "value": false
+        },
+        {
             "name": "line_Sunbury",
             "value": false
         },
@@ -89,7 +93,7 @@
             ]
         },
         {
-            "filter": "(line_Alamein && datum.LineArray == 'Alamein') || (line_Belgrave && datum.LineArray == 'Belgrave') || (line_City_Loop && datum.LineArray == 'City Loop') || (line_Craigieburn && datum.LineArray == 'Craigieburn') || (line_Cranbourne && datum.LineArray == 'Cranbourne') || (line_Frankston && datum.LineArray == 'Frankston') || (line_Glen_Waverley && datum.LineArray == 'Glen Waverley') || (line_Hurstbridge && datum.LineArray == 'Hurstbridge') || (line_Lilydale && datum.LineArray == 'Lilydale') || (line_Mernda && datum.LineArray == 'Mernda') || (line_Pakenham && datum.LineArray == 'Pakenham') || (line_Sandringham && datum.LineArray == 'Sandringham') || (line_Sunbury && datum.LineArray == 'Sunbury') || (line_Upfield && datum.LineArray == 'Upfield') || (line_Werribee && datum.LineArray == 'Werribee') || (line_Williamstown && datum.LineArray == 'Williamstown')"
+            "filter": "(line_Alamein && datum.LineArray == 'Alamein') || (line_Belgrave && datum.LineArray == 'Belgrave') || (line_City_Loop && datum.LineArray == 'City Loop') || (line_Craigieburn && datum.LineArray == 'Craigieburn') || (line_Cranbourne && datum.LineArray == 'Cranbourne') || (line_Frankston && datum.LineArray == 'Frankston') || (line_Glen_Waverley && datum.LineArray == 'Glen Waverley') || (line_Hurstbridge && datum.LineArray == 'Hurstbridge') || (line_Lilydale && datum.LineArray == 'Lilydale') || (line_Mernda && datum.LineArray == 'Mernda') || (line_Pakenham && datum.LineArray == 'Pakenham') || (line_Sandringham && datum.LineArray == 'Sandringham') || (line_Stony_Point && datum.LineArray == 'Stony Point') || (line_Sunbury && datum.LineArray == 'Sunbury') || (line_Upfield && datum.LineArray == 'Upfield') || (line_Werribee && datum.LineArray == 'Werribee') || (line_Williamstown && datum.LineArray == 'Williamstown')"
         },
         {
             "aggregate": [
