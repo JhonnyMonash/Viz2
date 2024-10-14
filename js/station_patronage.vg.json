@@ -41,74 +41,10 @@
         "step": 0.01,
         "name": "Center Latitude (Up - Down): "
       }
-    },
-    {
-      "name": "line2_Alamein",
-      "value": true
-    },
-    {
-      "name": "line2_Belgrave",
-      "value": true
-    },
-    {
-      "name": "line2_Craigieburn",
-      "value": true
-    },
-    {
-      "name": "line2_City_Loop",
-      "value": true
-    },
-    {
-      "name": "line2_Cranbourne",
-      "value": true
-    },
-    {
-      "name": "line2_Frankston",
-      "value": true
-    },
-    {
-      "name": "line2_Glen_Waverley",
-      "value": true
-    },
-    {
-      "name": "line2_Hurstbridge",
-      "value": true
-    },
-    {
-      "name": "line2_Lilydale",
-      "value": true
-    },
-    {
-      "name": "line2_Mernda",
-      "value": true
-    },
-    {
-      "name": "line2_Pakenham",
-      "value": true
-    },
-    {
-      "name": "line2_Sandringham",
-      "value": true
-    },
-    {
-      "name": "line2_Sunbury",
-      "value": true
-    },
-    {
-      "name": "line2_Upfield",
-      "value": true
-    },
-    {
-      "name": "line2_Werribee",
-      "value": true
-    },
-    {
-      "name": "line2_Williamstown",
-      "value": true
     }
   ],
   "projection": {
-    "type": "equirectangular",
+    "type": "mercator",
     "center": {
       "expr": "[center_longitude, center_latitude]"
     },
@@ -138,10 +74,6 @@
       },
       "transform": [
         {
-          "calculate": "(zoom_level * zoom_level) / 42000000",
-          "as": "circle_size"
-        },
-        {
           "calculate": "split(datum.Line, /,\\s*/)",
           "as": "LineArray"
         },
@@ -149,16 +81,22 @@
           "flatten": [
             "LineArray"
           ]
-        },
-        {
-          "filter": "(line2_Alamein && datum.LineArray == 'Alamein') || (line2_Belgrave && datum.LineArray == 'Belgrave') || (line2_City_Loop && datum.LineArray == 'City Loop') || (line2_Craigieburn && datum.LineArray == 'Craigieburn') || (line2_Cranbourne && datum.LineArray == 'Cranbourne') || (line2_Frankston && datum.LineArray == 'Frankston') || (line2_Glen_Waverley && datum.LineArray == 'Glen Waverley') || (line2_Hurstbridge && datum.LineArray == 'Hurstbridge') || (line2_Lilydale && datum.LineArray == 'Lilydale') || (line2_Mernda && datum.LineArray == 'Mernda') || (line2_Pakenham && datum.LineArray == 'Pakenham') || (line2_Sandringham && datum.LineArray == 'Sandringham') || (line2_Sunbury && datum.LineArray == 'Sunbury') || (line2_Upfield && datum.LineArray == 'Upfield') || (line2_Werribee && datum.LineArray == 'Werribee') || (line2_Williamstown && datum.LineArray == 'Williamstown')"
         }
       ],
+      "selection": {
+        "line_selection": {
+          "type": "multi",
+          "fields": [
+            "LineArray"
+          ],
+          "bind": "legend"
+        }
+      },
       "mark": {
         "type": "circle",
-        "opacity": 0.9,
+        "opacity": 0.8,
         "stroke": "black",
-        "strokeWidth": 1
+        "strokeWidth": 0.5
       },
       "encoding": {
         "longitude": {
@@ -170,41 +108,48 @@
           "type": "quantitative"
         },
         "size": {
-          "field": "circle_size",
-          "type": "quantitative",
-          "scale": null,
-          "legend": null
-        },
-        "color": {
           "field": "Pax_annual",
           "type": "quantitative",
           "scale": {
-            "type": "linear",
+            "type": "sqrt",
             "range": [
-              "blue",
-              "red"
+              1,
+              500
             ]
           },
           "legend": {
-            "title": "Ridership (Passengers)",
-            "orient": "bottom-right"
+            "title": "Annual Passengers"
           }
+        },
+        "color": {
+          "field": "LineArray",
+          "type": "nominal",
+          "legend": {
+            "title": "Train Lines"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "selection": "line_selection",
+            "value": 1
+          },
+          "value": 0.1
         },
         "tooltip": [
           {
             "field": "Stop_name",
-            "type": "ordinal",
+            "type": "nominal",
             "title": "Stop Name"
           },
           {
             "field": "Pax_annual",
             "type": "quantitative",
-            "title": "Number of Passengers",
+            "title": "Annual Passengers",
             "format": ",d"
           },
           {
             "field": "Line",
-            "type": "ordinal",
+            "type": "nominal",
             "title": "Train Lines Served"
           }
         ]
